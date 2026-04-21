@@ -55,6 +55,7 @@ N2YO_PASSES_URL = (
 # Satellites available for selection: display name → NORAD ID
 SATELLITES = {
     "ISS": 25544,
+    "Meteor M2-3": 57166,
     "Meteor M2-4": 59051,
 }
 
