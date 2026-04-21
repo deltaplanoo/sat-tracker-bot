@@ -141,7 +141,7 @@ def sat_selection_keyboard() -> InlineKeyboardMarkup:
 
 async def _ask_new_location(message, context) -> int:
     """Send the location-request message. Accepts a telegram Message object."""
-    share_btn = KeyboardButton("Share my location", request_location=True)
+    share_btn = KeyboardButton("📍 Share my location", request_location=True)
     keyboard = ReplyKeyboardMarkup(
         [[share_btn]], resize_keyboard=True, one_time_keyboard=True
     )
@@ -167,10 +167,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         lat, lon = last["lat"], last["lon"]
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton(
-                f"Use last position ({lat:.4f}, {lon:.4f})",
+                f"⌛️ Use last position ({lat:.4f}, {lon:.4f})",
                 callback_data="use_last_loc",
             )],
-            [InlineKeyboardButton("Enter a new position", callback_data="new_loc")],
+            [InlineKeyboardButton("📍 Enter a new position", callback_data="new_loc")],
         ])
         await update.message.reply_text(
             "Welcome back to *Satellite Tracker*!\n\n"

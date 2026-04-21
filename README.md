@@ -19,7 +19,7 @@ A Telegram bot that retrieves the next 48-hour satellite passages over any locat
 ### 1. Install dependencies
 
 ```bash
-pip install "python-telegram-bot[job-queue]>=20" requests
+pip install -r requirements.txt
 ```
 
 ### 2. Get your tokens
@@ -55,12 +55,6 @@ python satellite_tracker_bot.py
   └─► Ask for location
         ├─ [📍 Share my location]  ← GPS button
         └─ Type "lat, lon"  e.g. 43.7696, 11.2558
-
-  └─► Ask for satellite name
-        └─ Type a name e.g. "ISS", "Hubble", "Starlink"
-
-  └─► Show matching satellites as inline buttons
-        └─ [ISS (ZARYA)]  [HUBBLE]  …
 
   └─► Show next 48h passes:
         Pass 1
